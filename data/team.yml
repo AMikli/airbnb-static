@@ -1,0 +1,20 @@
+
+# - name: Romain
+#   role: COO
+# - name: Seb
+#   role: CTO
+# - name: Anne
+#   role: role
+
+romain:
+  picture: romain.jpeg
+  role: COO
+  card: card-brussels.jpeg
+seb:
+  picture: seb.jpeg
+  role: CTO
+  card: card-london.jpeg
+anne:
+  picture: anne.jpeg
+  role: role
+  card: card-paris.jpg

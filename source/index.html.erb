@@ -47,44 +47,18 @@ title: Le Wagon Middleman boilerplate
 <div class="wrapper-grey">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'card-brussels.jpeg'%>);">
-          <div class="card-category">Popular
+      <% data.team.each do |member, infos| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path infos.card %>');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2><%= member.capitalize %>'s flat</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <%= image_tag infos.picture, class: "card-user avatar" %>
           </div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
-          </div>
-          <%= image_tag 'romain.jpeg', class: 'card-user avatar' %>
-          <a class="card-link" href="#" ></a>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'card-brussels.jpeg'%>);">
-          <div class="card-category">Popular
-          </div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
-          </div>
-          <%= image_tag 'romain.jpeg', class: 'card-user avatar' %>
-          <a class="card-link" href="#" ></a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'card-brussels.jpeg'%>);">
-          <div class="card-category">Popular
-          </div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
-          </div>
-          <%= image_tag 'romain.jpeg', class: 'card-user avatar' %>
-          <a class="card-link" href="#" ></a>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -120,3 +94,4 @@ title: Le Wagon Middleman boilerplate
       title: "You are here!"
     });
   </script>
+
