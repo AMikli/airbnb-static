@@ -7,14 +7,17 @@
 #   role: role
 
 romain:
+  owner_name: Romain
   picture: romain.jpeg
   role: COO
   card: card-brussels.jpeg
 seb:
+  owner_name: Seb
   picture: seb.jpeg
   role: CTO
   card: card-london.jpeg
 anne:
+  owner_name: Anne
   picture: anne.jpeg
   role: role
   card: card-paris.jpg

@@ -47,15 +47,16 @@ title: Le Wagon Middleman boilerplate
 <div class="wrapper-grey">
   <div class="container">
     <div class="row">
-      <% data.team.each do |member, infos| %>
+      <% data.flats.each do |owner, flats| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path infos.card %>');">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path flats.card %>');">
             <div class="card-category">Popular</div>
             <div class="card-description">
-              <h2><%= member.capitalize %>'s flat</h2>
+              <h2><%= owner.capitalize %>'s flat</h2>
               <p>Very cool stuff, useful and smart</p>
             </div>
-            <%= image_tag infos.picture, class: "card-user avatar" %>
+            <%= image_tag flats.owner_picture, class: "card-user avatar" %>
+            <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
           </div>
         </div>
       <% end %>
